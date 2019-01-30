@@ -1,22 +1,19 @@
-"use strict";
+'use strict';
 
-console.log("App.js is running");
+var square = function square(x) {
+    return x * x;
+};
+console.log(square(4));
+// const squareArrow =(x) =>{
+// return x*x;
+// }
+var squareArrow = function squareArrow(x) {
+    return x * x;
+};
+console.log(squareArrow(2.5));
+var fullName = "Sravani Cheripalli";
+var getFirstName = function getFirstName(fullName) {
+    return fullName.split(' ')[0];
+};
 
-// JSX - javascript XML
-var template = React.createElement(
-  "div",
-  null,
-  React.createElement(
-    "h1",
-    null,
-    "Added Paranthesis this changed"
-  ),
-  React.createElement(
-    "p",
-    null,
-    "This is sibling tag"
-  )
-);
-
-var appRoot = document.getElementById('app');
-ReactDOM.render(template, appRoot);
+console.log('FirstName is ==' + getFirstName(fullName));
